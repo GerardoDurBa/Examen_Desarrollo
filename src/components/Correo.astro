@@ -1,0 +1,50 @@
+---
+import './src/styles/global.css'
+---
+
+<form id="emailForm" class="space-y-4" action="https://formsubmit.co/gerios1018@gmail.com" method="POST">
+      <div>
+        <label class="block text-gray-600 mb-1" for="email">Correo Electronico</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
+          placeholder="ejemplo@correo.com" 
+          required 
+        />
+      </div>
+      <div>
+        <label class="block text-gray-600 mb-1" for="subject">Asunto</label>
+        <input 
+          type="text" 
+          id="subject" 
+          name="subject" 
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
+          placeholder="Asunto del mensaje" 
+          required 
+        />
+      </div>
+      <div>
+        <label class="block text-gray-600 mb-1" for="message">Mensaje</label>
+        <textarea 
+          id="message" 
+          name="message" 
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
+          placeholder="Escribe tu mensaje aqui..." 
+          rows="4" 
+          required
+        ></textarea>
+      </div>
+
+      <div class="flex justify-end">
+        <button 
+          type="submit" 
+          class="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-2 px-4 rounded-lg transition"
+        >
+          Enviar
+        </button>
+      </div>
+      <input type="hidden" name="_next" value="http://localhost:4321/planes">
+      <input type="hidden" name="_captcha" value="false">
+    </form>
